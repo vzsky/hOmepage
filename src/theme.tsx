@@ -6,14 +6,20 @@ export default  {
 
 export const config = {
     home : {
-        daybg: 'white',
-        nightbg: 'gray.500',
-        sun: 'assets/sun.gif',
-        moon: 'assets/sun.gif',
+        sky: {
+            light : 'white',
+            dark : 'gray.500',
+        },
+        sun: 'assets/sky/sun.gif',
+        moon: 'assets/sky/moon.gif',
         cloud: ['',
-            'assets/cloud1.gif',
-            'assets/cloud2.gif',
+            'assets/sky/cloud1.gif',
+            'assets/sky/cloud2.gif',
         ],
-        wave: 'assets/wave.gif',
+        wave: ['',
+            'assets/sky/wave1.gif',
+            'assets/sky/wave2.gif',
+            'assets/sky/wave3.gif',
+        ],
     },
 }

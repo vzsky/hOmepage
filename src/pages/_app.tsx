@@ -4,7 +4,7 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import { Global, css } from '@emotion/core'
-import { CSSReset, ThemeProvider } from '@chakra-ui/core'
+import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import customTheme from '../theme'
 
 const Full = () => (
@@ -22,12 +22,14 @@ const Full = () => (
 export default ({ Component, pageProps }: AppProps) => {
     return (
         <ThemeProvider theme={customTheme}>
-            <Head>
-                <title>my99n</title>
-            </Head>
-            <CSSReset />
-            <Component {...pageProps} />
-            <Full />
+            <ColorModeProvider>
+                <Head>
+                    <title>my99n</title>
+                </Head>
+                <CSSReset />
+                <Component {...pageProps} />
+                <Full />
+            </ColorModeProvider>
         </ThemeProvider>
     )
 }
