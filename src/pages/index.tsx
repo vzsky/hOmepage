@@ -1,12 +1,16 @@
-import Sky from '../components/sky'
-import Profile from '../components/Profile'
+import Sky from '../components/Sky'
+import About from '../components/About'
+import Gallery from '../components/Gallery'
+import Work from '../components/Work'
 
 import ReactPageScroller from "react-page-scroller"
 
 const Home = () => (
     <ReactPageScroller>
         <Sky />
-        <Profile />
+        <About />
+        <Work />
+        <Gallery />
     </ReactPageScroller>
 )
 

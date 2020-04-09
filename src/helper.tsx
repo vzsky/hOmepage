@@ -51,3 +51,10 @@ export const Draggable = (props:Prop) => (
         {...props}
     />
 )
+
+export const Half = (props:Prop) => (
+    <Chakra.Grid 
+        templateColumns='1fr 1fr'
+        {...props}
+    />
+)
