@@ -3,15 +3,17 @@ import About from '../components/About'
 import Gallery from '../components/Gallery'
 import Work from '../components/Work'
 
-import ReactPageScroller from "react-page-scroller"
+import { Box } from '@chakra-ui/core'
 
 const Home = () => (
-    <ReactPageScroller>
+    <>
         <Sky />
-        <About />
-        <Work />
-        <Gallery />
-    </ReactPageScroller>
+        <Box>
+            <About />
+            <Work />
+            <Gallery />
+        </Box>
+    </>
 )
 
 export default Home

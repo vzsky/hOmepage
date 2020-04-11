@@ -12,6 +12,7 @@ import {
     Draggable,
 } from '../helper'
 import { config } from '../theme'
+import { useState, useEffect } from 'react'
 const settings = config.home
 
 const Sun = (props:Prop) => {
@@ -48,27 +49,27 @@ const Wave = (props:Prop) => (
     </Draggable>
 )
 
-const Name = (props:Prop) => (
-    <Text 
-        position='absolute'
-        fontSize={['xl', '3xl', '4xl', '5xl']}
-        {...props}
-    />
-)
-
 const Horizontal = (props:Prop) => {
     const { colorMode } = useColorMode();
     let Float:JSX.Element = colorMode === 'dark'
         ? <Moon top='12%' left='7%'/>
         : <Sun top='10%' left='5%'/>
+    const [sky, setSky] = useState('')
+    useEffect(()=>{ setSky(settings.sky[colorMode]) }, [colorMode])
     return (
-        <Box width='100%' height='100%' bg={settings.sky[colorMode]}>
+        <Box width='100%' height='100%' bg={sky}>
+            <Text/> {/* I don't know why but this fix */}
             {Float}
             <Draggable>
-                <Name className='drag' top='33%' left='28%'> Touch </Name>
-            </Draggable>
-            <Draggable>
-                <Name className='drag' top='44%' left='28%'> Sungkawichai </Name>
+                <Text 
+                    className='drag'
+                    top='33%'
+                    left='28%'
+                    position='absolute'
+                    fontSize={['xl', '3xl', '4xl', '5xl']}
+                > 
+                    Touch <br/> Sungkawichai 
+                </Text>
             </Draggable>
             <Cloud order={1} top='10%' left='60%' />
             <Cloud order={2} top='30%' left='75%' />
@@ -81,7 +82,7 @@ const Horizontal = (props:Prop) => {
 
 const Vertical = (props:Prop) => {
     return (
-        <Box width='100%' height='100%' bg={props.bg}>
+        <Box width='100%' height='100%'>
             <Text> Under Development </Text>
         </Box>
     )

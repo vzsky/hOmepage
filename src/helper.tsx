@@ -35,12 +35,10 @@ export const useWindowSize = () => {
 
 export const Image = (props:Prop) => (
     <Chakra.Image 
-        width='100%'
-        src={props.src} 
-        onClick={props.onClick}
         onDragStart={(e) => {
             e.preventDefault();
         }}
+        {...props}
     />
 )
 
@@ -52,9 +50,20 @@ export const Draggable = (props:Prop) => (
     />
 )
 
-export const Half = (props:Prop) => (
-    <Chakra.Grid 
-        templateColumns='1fr 1fr'
-        {...props}
-    />
-)
+import Codeforces from '@iconify/icons-simple-icons/codeforces'
+import Github from '@iconify/icons-simple-icons/github'
+import Facebook from '@iconify/icons-simple-icons/facebook'
+import LinkedIn from '@iconify/icons-simple-icons/linkedin'
+import Instagram from '@iconify/icons-simple-icons/instagram'
+import Mail from '@iconify/icons-simple-icons/gmail'
+import Telegram from '@iconify/icons-simple-icons/telegram'
+
+export const IconMap = {
+    'codeforces' : Codeforces,
+    'github' : Github,
+    'facebook' : Facebook,
+    'linkedin' : LinkedIn,
+    'instagram' : Instagram,
+    'mail' : Mail,
+    'telegram' : Telegram,
+}
