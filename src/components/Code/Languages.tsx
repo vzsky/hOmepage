@@ -59,7 +59,7 @@ print("Hello "+str(name))
   <head>
     <title> Hello page </title>
     <meta name="description" content="Greeting site" />
-  <head>
+  </head>
   <body>
     <h1 id='helloMessage'> Hello whoever </h1>
   </body>

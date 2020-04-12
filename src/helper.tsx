@@ -80,3 +80,31 @@ export const IconMap = {
     'mail' : Mail,
     'telegram' : Telegram,
 }
+
+export const newapi = async (method:string, path:string, headers:any, body?:any) => {
+    let req:any = {
+        method : method,
+    }
+    if (headers) {
+        req.headers = {
+            'Content-type' : 'application/json',
+            ...headers
+        }
+    }
+    if (body) {
+        req.body = JSON.stringify({
+            ...body
+        })
+    }
+    try {
+        let res = await fetch(path, req)
+        let json = await res.json()
+        return json 
+    } catch (e) {
+        return
+    }
+}
+
+export const GetApi = async (path:string, headers?:any) => {
+    return await newapi('GET', path, headers)
+}

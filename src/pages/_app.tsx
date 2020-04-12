@@ -5,7 +5,8 @@ import Head from 'next/head'
 
 import { Global, css } from '@emotion/core'
 import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
-import customTheme from '../theme'
+import { theme } from '../config'
+import '../app.css'
 
 // codemirror import 
 import 'codemirror/lib/codemirror.css'
@@ -45,7 +46,7 @@ const Full = () => (
 )
 export default ({ Component, pageProps }: AppProps) => {
     return (
-        <ThemeProvider theme={customTheme}>
+        <ThemeProvider theme={theme}>
             <ColorModeProvider>
                 <Head>
                     <title>my99n</title>

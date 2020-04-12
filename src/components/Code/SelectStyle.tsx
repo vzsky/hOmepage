@@ -1,15 +1,8 @@
 import { useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
-import { config } from '../../theme'
+import { config } from '../../config'
 import chroma from 'chroma-js'
 const settings = config.work.code.select
-
-const input = (provided:any) => {
-    return {
-        ...provided,
-        color : 'red'
-    }
-}
 
 const menu = (provided:any) => {
     Object.assign(provided, {zIndex: 1000})
@@ -28,6 +21,7 @@ const control = (provided:any, {isFocused}) => {
     useEffect(() => setBg(settings.bg[colorMode]), [colorMode])
     return { 
         ...provided,
+        width: '100%',
         backgroundColor: bg,
         borderColor: bg,
         border: isFocused ? 0 : 0,
@@ -75,7 +69,6 @@ const option = (provided:any, { data, isFocused, isSelected }) => {
 }
 
 export default {
-    input : input,
     menu: menu,
     control: control,
     singleValue: singleValue,

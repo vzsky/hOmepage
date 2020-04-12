@@ -11,7 +11,7 @@ import {
     Image,
     Draggable,
 } from '../helper'
-import { config } from '../theme'
+import { config } from '../config'
 import { useState, useEffect } from 'react'
 const settings = config.home
 

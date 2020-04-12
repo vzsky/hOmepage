@@ -5,7 +5,7 @@ import {
     Layout
 } from '../helper'
 import { useState, useEffect } from 'react'
-import { config } from '../theme'
+import { config } from '../config'
 const settings = config.gallery
 
 export default () => {

@@ -7,7 +7,8 @@ import {
 } from '../helper'
 import { useState, useEffect } from 'react'
 import Code from './Code/Code'
-import { config } from '../theme'
+import Codeforces from './Codeforces'
+import { config } from '../config'
 const settings = config.work
 
 export default () => {
@@ -20,10 +21,10 @@ export default () => {
 
     return (
         <Layout title="What I do" bg={bg}>
-            <Box width='34%'>
-                oiprog
+            <Box width={['100%', '34%']} p={3}>
+                <Codeforces/>
             </Box>
-            <Box width='66%'>
+            <Box width={['100%', '66%']} p={3}>
                 <Code/>
             </Box>
         </Layout>

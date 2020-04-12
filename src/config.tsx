@@ -1,10 +1,13 @@
-import { theme } from "@chakra-ui/core";
+import { theme as Chakratheme } from "@chakra-ui/core";
 
-export default  {
-    ...theme
+export const theme = {
+    ...Chakratheme
 };
 
 export const config = {
+    breakpoint : {
+        sm : 480
+    },
     home : {
         sky: {
             light : 'white',
@@ -72,6 +75,21 @@ export const config = {
                     dark : 'white',
                     light : 'black'
                 }
+            }
+        },
+        codeforces : {
+            handle : 'my99n',
+            color : (rating:number) : string => {
+                if (rating >= 3000) return '#000000'
+                if (rating >= 2600) return '#AA0000'
+                if (rating >= 2400) return '#FF5555'
+                if (rating >= 2300) return '#FF9900'
+                if (rating >= 2100) return '#FFCC00'
+                if (rating >= 1900) return '#FF00AA'
+                if (rating >= 1600) return '#8800FF'
+                if (rating >= 1400) return '#00CCCC'
+                if (rating >= 1200) return '#00FF00'
+                return '#CCCCCC'
             }
         }
     },
