@@ -12,7 +12,6 @@ export default () => {
     const { colorMode } = useColorMode();
     const [ theme, setTheme ] = useState('')
     const [ lang, setLang ] = useState(languages[0].mode)
-    const [ headBg, setHeadBg ] = useState(languages[0].mode)
     const [ code, setCode ] = useState(languages[0].code)
     const [ lineNum, setLineNum ] = useState(false)
 
@@ -24,7 +23,6 @@ export default () => {
 
     useEffect(()=>{
         setTheme(settings.editor[colorMode])
-        setHeadBg(settings.select.bg[colorMode])
     }, [colorMode])
 
     const onSelect = (val:any) => {
@@ -35,7 +33,14 @@ export default () => {
     return (
         <>
             <Flex width='100%' wrap='wrap'>
-                <Text width={['100%', '100%', '20%']} alignSelf='center' justifySelf='center' fontSize={['sm', 'md', 'lg']}> I speak </Text>
+                <Text 
+                    width={['100%', '100%', '20%']}
+                    alignSelf='center'
+                    justifySelf='center'
+                    fontSize={['sm', 'md', 'lg']}
+                >
+                    I speak
+                </Text>
                 <Box width={['100%', '100%', '80%']} >
                     <Select
                         isSearchable={false}

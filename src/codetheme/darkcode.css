@@ -31,7 +31,7 @@
 	color: #75715E;
 }
 .cm-s-monokai .cm-string {
-	color: #E6DB74;
+	color: #ab3bdf;
 }
 .cm-s-monokai .cm-number {
 	color: #66D9EF;
@@ -41,6 +41,9 @@
 }
 .cm-s-monokai .cm-keyword {
 	color: #F92672;
+}
+.cm-s-monokai .cm-tag { 
+    color: #f7f44b; 
 }
 .cm-s-monokai .cm-variable {
 	color: #A6E22E;
