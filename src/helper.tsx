@@ -50,6 +50,19 @@ export const Draggable = (props:Prop) => (
     />
 )
 
+export const Layout = (props:Prop) => (
+    <Chakra.Flex direction='column' width='100%' wrap='wrap' bg={props.bg}>
+        <Chakra.Box maxW='1000px' width='100%' alignSelf='center' p={5}>
+            <Chakra.Box width='100%'>
+                <Chakra.Text fontSize={['3xl', '4xl', '5xl', '6xl']} > {props.title} </Chakra.Text>
+            </Chakra.Box>
+            <Chakra.Flex width='100%' justifyContent='stretch' wrap='wrap'>
+                {props.children}
+            </Chakra.Flex>
+        </Chakra.Box>
+    </Chakra.Flex> 
+)
+
 import Codeforces from '@iconify/icons-simple-icons/codeforces'
 import Github from '@iconify/icons-simple-icons/github'
 import Facebook from '@iconify/icons-simple-icons/facebook'

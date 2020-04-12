@@ -1,16 +1,23 @@
 import {
-    Box,
-    Text,
-    Flex,
+    useColorMode,
 } from '@chakra-ui/core'
+import {
+    Layout
+} from '../helper'
+import { useState, useEffect } from 'react'
+import { config } from '../theme'
+const settings = config.gallery
 
 export default () => {
+    const { colorMode } = useColorMode();
+    const [bg, setBg] = useState('');
+
+    useEffect(()=>{
+        setBg(settings.bg[colorMode])
+    }, [colorMode])
 
     return (
-        <Flex height='100%' width='100%' bg='yellow.100' justifyContent='center'>
-            <Box width='1200px' p='5%s' paddingX='5%'>
-                <Text fontSize='6xl' minH='100px' h='20%' > Gallery </Text>
-            </Box>
-        </Flex>
+        <Layout title="Gallery" bg={bg}>
+        </Layout>
     )
 }

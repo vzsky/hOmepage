@@ -7,6 +7,30 @@ import { Global, css } from '@emotion/core'
 import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import customTheme from '../theme'
 
+// codemirror import 
+import 'codemirror/lib/codemirror.css'
+
+import '../codetheme/darkcode.css'
+import '../codetheme/lightcode.css'
+
+if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
+    require('codemirror/mode/clike/clike.js')
+    require('codemirror/mode/python/python.js')
+    require('codemirror/mode/xml/xml.js')
+    require('codemirror/mode/javascript/javascript.js')
+    require('codemirror/mode/css/css.js')
+    require('codemirror/mode/django/django.js')
+    require('codemirror/mode/shell/shell.js')
+    require('codemirror/mode/jsx/jsx.js')
+  
+    require('codemirror/addon/selection/active-line.js')
+    require('codemirror/addon/fold/foldgutter.css')
+    require('codemirror/addon/fold/foldgutter.js')
+    require('codemirror/addon/fold/brace-fold.js')
+    require('codemirror/addon/fold/indent-fold.js')
+}
+//
+
 const Full = () => (
     <Global
         styles={css`

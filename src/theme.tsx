@@ -8,7 +8,7 @@ export const config = {
     home : {
         sky: {
             light : 'white',
-            dark : 'gray.500',
+            dark : 'gray.700',
         },
         sun: 'assets/sky/sun.gif',
         moon: 'assets/sky/moon.gif',
@@ -52,5 +52,33 @@ export const config = {
                 }
             }
         }
-    }
+    },
+    work : {
+        bg : {
+            dark : 'blue.400',
+            light : 'blue.100'
+        },
+        code : { 
+            editor : {// edit the css files
+                dark : 'monokai',
+                light : '3024-day',
+            },
+            select : {
+                bg : {
+                    dark : '#444',
+                    light : 'white',
+                },
+                mainText : {
+                    dark : 'white',
+                    light : 'black'
+                }
+            }
+        }
+    },
+    gallery : {
+        bg : {
+            dark : 'yellow.500',
+            light : 'yellow.100'
+        }
+    },
 }
