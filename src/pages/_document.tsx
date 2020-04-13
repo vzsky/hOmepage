@@ -1,12 +1,5 @@
 import React from 'react'
-
-import Document, {
-    Head,
-    Html,
-    Main,
-    NextScript,
-    DocumentContext
-} from 'next/document'
+import Document, { Head, Html, Main, NextScript, DocumentContext } from 'next/document'
 
 class NextSite extends Document {
     public static async getInitialProps(ctx: DocumentContext) {

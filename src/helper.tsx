@@ -108,3 +108,18 @@ export const newapi = async (method:string, path:string, headers:any, body?:any)
 export const GetApi = async (path:string, headers?:any) => {
     return await newapi('GET', path, headers)
 }
+
+export const Loading = () => {
+    const [dot, setDot] = useState('')
+    useEffect(()=>{
+        setTimeout(()=>{
+            if (dot === '...')  setDot('.')
+            else                setDot((dot+'.'))
+        }, 500)
+    },[dot])
+    return (
+        <Chakra.Flex width='100%' height='100%' justifyContent='center' alignItems='center'>
+            <Chakra.Heading> Loading {dot} </Chakra.Heading>
+        </Chakra.Flex>
+    )
+}

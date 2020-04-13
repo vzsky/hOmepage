@@ -1,11 +1,12 @@
-import Sky from '../components/Sky'
-import About from '../components/About'
-import Gallery from '../components/Gallery'
-import Work from '../components/Work'
+import Sky from './Sky'
+import About from './About'
+import Gallery from './Gallery'
+import Work from './Work'
 
 import { Box } from '@chakra-ui/core'
 
-const Home = () => (
+const Home = () => {
+    return (
     <>
         <Sky />
         <Box>
@@ -14,6 +15,7 @@ const Home = () => (
             <Gallery />
         </Box>
     </>
-)
+    )
+}
 
 export default Home

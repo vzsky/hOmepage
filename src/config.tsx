@@ -1,7 +1,10 @@
 import { theme as Chakratheme } from "@chakra-ui/core";
 
 export const theme = {
-    ...Chakratheme
+    ...Chakratheme,
+    colors : {
+        ...Chakratheme.colors,
+    }
 };
 
 export const config = {
@@ -27,7 +30,7 @@ export const config = {
     },
     about : {
         bg : {
-            light : 'red.100',
+            light : 'red.50',
             dark : 'red.300',
         },
         pic : {
@@ -59,7 +62,7 @@ export const config = {
     work : {
         bg : {
             dark : 'blue.400',
-            light : 'blue.100'
+            light : 'blue.50'
         },
         code : { 
             editor : {// edit the css files
@@ -153,7 +156,7 @@ export const config = {
     gallery : {
         bg : {
             dark : 'yellow.500',
-            light : 'yellow.100'
+            light : 'orange.50'
         },
     },
 }

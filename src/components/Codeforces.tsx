@@ -1,10 +1,4 @@
-import {
-    Text,
-    Box,
-    Flex,
-    Input,
-    useColorMode,
-} from '@chakra-ui/core'
+import { Text, Box, Flex, Input, useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import { GetApi } from '../helper'

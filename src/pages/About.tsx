@@ -1,17 +1,5 @@
-import {
-    Box,
-    Text,
-    Flex,
-    Stack,
-    useColorMode
-} from '@chakra-ui/core'
-import {
-    Image,
-    IconMap,
-    useWindowSize,
-    Prop,
-    Layout,
-} from '../helper'
+import { Box, Text, Flex, Stack, useColorMode } from '@chakra-ui/core'
+import { Image, IconMap, useWindowSize, Prop, Layout } from '../helper'
 import { Icon as Iconify } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import { config } from '../config'
