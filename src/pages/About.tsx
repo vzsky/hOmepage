@@ -7,11 +7,9 @@ const settings = config.about
 
 const Description = () => (
     <>
-    VITAL! THIS SOUND SUPER SILLY AND UNEDUCATED! EDIT THIS BEFORE PROD. <br/>
-    My name is Touch Sungkawichai <br/>
-    I am a student filled with passion about computational theory and mathematics.
-    I classified myself as a liberated person. I love listening to music and watching movies.
-    I also enjoy taking pictures. 
+    Hey, I am Touch Sungkawichai <br/>
+    I am a liberated student filled with passion about computation and mathematics. <br/>
+    Please play around and enjoy my site. <br/> (Don't forget to click the sun)
     </>
 )
 
