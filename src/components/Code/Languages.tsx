@@ -1,10 +1,9 @@
 export default [
-  { 
-    value:'1',
+  {
+    value: '1',
     mode: 'text/x-csrc',
     label: 'C/C++',
-    code : 
-`#include<bits/stdc++.h>
+    code: `#include<bits/stdc++.h>
 using namespace std;
 
 int main() {
@@ -15,16 +14,15 @@ int main() {
 }
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'2',
+  {
+    value: '2',
     mode: 'javascript',
     label: 'Javascript',
-    code : 
-`function greet() { 
+    code: `function greet() { 
   let name = prompt("What is your name? "); 
   if (name !== null) { 
     document.getElementById("helloMessage").innerHTML = 
@@ -33,29 +31,27 @@ int main() {
 }
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'3',
+  {
+    value: '3',
     mode: 'python',
     label: 'Python',
-    code : 
-`name = input('What is your name? ')
+    code: `name = input('What is your name? ')
 print("Hello "+str(name))
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'4',
+  {
+    value: '4',
     mode: 'xml',
     label: 'HTML',
-    code : 
-`<html>
+    code: `<html>
   <head>
     <title> Hello page </title>
     <meta name="description" content="Greeting site" />
@@ -66,31 +62,29 @@ print("Hello "+str(name))
 </html>
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
   {
-    value:'5',
+    value: '5',
     mode: 'css',
     label: 'CSS',
-    code : 
-`#helloMessage {
+    code: `#helloMessage {
   'color' : 'black';
   'width' : '50%';
 }
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'6',
+  {
+    value: '6',
     mode: 'python',
     label: 'Django',
-    code : 
-`from django.http import HttpResponse
+    code: `from django.http import HttpResponse
 
 def main_page(request):
   if request.method=='POST':
@@ -99,30 +93,28 @@ def main_page(request):
   return StreamingHttpResponse('What is your name?')
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'7',
+  {
+    value: '7',
     mode: 'shell',
     label: 'Shell',
-    code : 
-`read -p "What is your name? " name
+    code: `read -p "What is your name? " name
 echo "Hello $name"
 echo ""
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
-  { 
-    value:'8',
+  {
+    value: '8',
     mode: 'jsx',
     label: 'ReactJS',
-    code : 
-`export default () => {
+    code: `export default () => {
   const [name, setName] = useState('')
   return (
     <>
@@ -133,8 +125,8 @@ echo ""
 }
 `,
     color: {
-      dark : "#0000FF",
-      light : "#FF0000",
+      dark: '#0000FF',
+      light: '#FF0000',
     },
   },
 ]
