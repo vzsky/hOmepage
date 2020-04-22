@@ -5,60 +5,60 @@ import ReactDraggable from 'react-draggable'
 export type Prop = { [x: string]: any }
 
 export const useWindowSize = () => {
-  const isClient = typeof window === 'object'
+    const isClient = typeof window === 'object'
 
-  function getSize() {
-    return {
-      width: isClient ? window.innerWidth : undefined,
-      height: isClient ? window.innerHeight : undefined,
-    }
-  }
-
-  const [windowSize, setWindowSize] = useState(getSize)
-
-  useEffect(() => {
-    if (!isClient) {
-      return
+    function getSize() {
+        return {
+            width: isClient ? window.innerWidth : undefined,
+            height: isClient ? window.innerHeight : undefined,
+        }
     }
 
-    function handleResize() {
-      setWindowSize(getSize())
-    }
+    const [windowSize, setWindowSize] = useState(getSize)
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, []) // Empty array ensures that effect is only run on mount and unmount
+    useEffect(() => {
+        if (!isClient) {
+            return
+        }
 
-  return windowSize
+        function handleResize() {
+            setWindowSize(getSize())
+        }
+
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, []) // Empty array ensures that effect is only run on mount and unmount
+
+    return windowSize
 }
 
 export const Image = (props: Prop) => (
-  <Chakra.Image
-    onDragStart={(e) => {
-      e.preventDefault()
-    }}
-    {...props}
-  />
+    <Chakra.Image
+        onDragStart={(e) => {
+            e.preventDefault()
+        }}
+        {...props}
+    />
 )
 
 export const Draggable = (props: Prop) => (
-  <ReactDraggable handle=".drag" bounds="parent" {...props} />
+    <ReactDraggable handle=".drag" bounds="parent" {...props} />
 )
 
 export const Layout = (props: Prop) => (
-  <Chakra.Flex direction="column" width="100%" wrap="wrap" bg={props.bg}>
-    <Chakra.Box maxW="1000px" width="100%" alignSelf="center" p={5}>
-      <Chakra.Box width="100%">
-        <Chakra.Text fontSize={['3xl', '4xl', '5xl', '6xl']}>
-          {' '}
-          {props.title}{' '}
-        </Chakra.Text>
-      </Chakra.Box>
-      <Chakra.Flex width="100%" justifyContent="stretch" wrap="wrap">
-        {props.children}
-      </Chakra.Flex>
-    </Chakra.Box>
-  </Chakra.Flex>
+    <Chakra.Flex direction="column" width="100%" wrap="wrap" bg={props.bg}>
+        <Chakra.Box maxW="1000px" width="100%" alignSelf="center" p={5}>
+            <Chakra.Box width="100%">
+                <Chakra.Text fontSize={['3xl', '4xl', '5xl', '6xl']}>
+                    {' '}
+                    {props.title}{' '}
+                </Chakra.Text>
+            </Chakra.Box>
+            <Chakra.Flex width="100%" justifyContent="stretch" wrap="wrap">
+                {props.children}
+            </Chakra.Flex>
+        </Chakra.Box>
+    </Chakra.Flex>
 )
 
 import Codeforces from '@iconify/icons-simple-icons/codeforces'
@@ -70,64 +70,64 @@ import Mail from '@iconify/icons-simple-icons/gmail'
 import Telegram from '@iconify/icons-simple-icons/telegram'
 
 export const IconMap = {
-  codeforces: Codeforces,
-  github: Github,
-  facebook: Facebook,
-  linkedin: LinkedIn,
-  instagram: Instagram,
-  mail: Mail,
-  telegram: Telegram,
+    codeforces: Codeforces,
+    github: Github,
+    facebook: Facebook,
+    linkedin: LinkedIn,
+    instagram: Instagram,
+    mail: Mail,
+    telegram: Telegram,
 }
 
 export const newapi = async (
-  method: string,
-  path: string,
-  headers: any,
-  body?: any
+    method: string,
+    path: string,
+    headers: any,
+    body?: any
 ) => {
-  let req: any = {
-    method: method,
-  }
-  if (headers) {
-    req.headers = {
-      'Content-type': 'application/json',
-      ...headers,
+    let req: any = {
+        method: method,
     }
-  }
-  if (body) {
-    req.body = JSON.stringify({
-      ...body,
-    })
-  }
-  try {
-    let res = await fetch(path, req)
-    let json = await res.json()
-    return json
-  } catch (e) {
-    return
-  }
+    if (headers) {
+        req.headers = {
+            'Content-type': 'application/json',
+            ...headers,
+        }
+    }
+    if (body) {
+        req.body = JSON.stringify({
+            ...body,
+        })
+    }
+    try {
+        let res = await fetch(path, req)
+        let json = await res.json()
+        return json
+    } catch (e) {
+        return
+    }
 }
 
 export const GetApi = async (path: string, headers?: any) => {
-  return await newapi('GET', path, headers)
+    return await newapi('GET', path, headers)
 }
 
 export const Loading = () => {
-  const [dot, setDot] = useState('')
-  useEffect(() => {
-    setTimeout(() => {
-      if (dot === '...') setDot('.')
-      else setDot(dot + '.')
-    }, 500)
-  }, [dot])
-  return (
-    <Chakra.Flex
-      width="100%"
-      height="100%"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Chakra.Heading> Loading {dot} </Chakra.Heading>
-    </Chakra.Flex>
-  )
+    const [dot, setDot] = useState('')
+    useEffect(() => {
+        setTimeout(() => {
+            if (dot === '...') setDot('.')
+            else setDot(dot + '.')
+        }, 500)
+    }, [dot])
+    return (
+        <Chakra.Flex
+            width="100%"
+            height="100%"
+            justifyContent="center"
+            alignItems="center"
+        >
+            <Chakra.Heading> Loading {dot} </Chakra.Heading>
+        </Chakra.Flex>
+    )
 }
