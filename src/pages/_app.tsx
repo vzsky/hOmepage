@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -8,7 +7,7 @@ import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
 import { theme } from '../config'
 import '../app.css'
 
-// codemirror import 
+// codemirror import
 import 'codemirror/lib/codemirror.css'
 
 import '../codetheme/darkcode.css'
@@ -23,7 +22,7 @@ if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
     require('codemirror/mode/django/django.js')
     require('codemirror/mode/shell/shell.js')
     require('codemirror/mode/jsx/jsx.js')
-  
+
     require('codemirror/addon/selection/active-line.js')
     require('codemirror/addon/fold/foldgutter.css')
     require('codemirror/addon/fold/foldgutter.js')
@@ -35,12 +34,12 @@ if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
 const Full = () => (
     <Global
         styles={css`
-        html,
-        body,
-        #__next {
-            height: 100%;
-            margin: 0;
-        }
+            html,
+            body,
+            #__next {
+                height: 100%;
+                margin: 0;
+            }
         `}
     />
 )

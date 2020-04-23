@@ -9,19 +9,19 @@ import { Loading } from '../helper'
 
 const Home = () => {
     const [state, setState] = useState('loading')
-    useEffect(()=>{
+    useEffect(() => {
         setState('ready')
     }, [])
-    if (state === 'loading') return <Loading/>
+    if (state === 'loading') return <Loading />
     return (
-    <>
-        <Sky />
-        <Box>
-            <About />
-            <Work />
-            <Gallery />
-        </Box>
-    </>
+        <>
+            <Sky />
+            <Box>
+                <About />
+                <Work />
+                <Gallery />
+            </Box>
+        </>
     )
 }
 

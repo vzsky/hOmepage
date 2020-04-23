@@ -6,27 +6,22 @@ import { photolight, photodark } from '../components/Photos'
 import { config } from '../config'
 const settings = config.gallery
 
-const Thumbnail = (props:Prop) => (
-    <Image {...props.imageProps}/>
-)
+const Thumbnail = (props: Prop) => <Image {...props.imageProps} />
 
 const ThumbnailStyle = () => {
-    return ({
-        'height' : '100%'     
-    })
+    return {
+        height: '100%',
+    }
 }
 
 export default () => {
-    const { colorMode } = useColorMode();
-    const [bg, setBg] = useState('');
-    const [photos, setPhotos] = useState(photolight);
+    const { colorMode } = useColorMode()
+    const [bg, setBg] = useState('')
+    const [photos, setPhotos] = useState(photolight)
 
-    useEffect(()=>{
+    useEffect(() => {
         setBg(settings.bg[colorMode])
-        setPhotos( colorMode==='light'
-            ? photolight
-            : photodark
-        )
+        setPhotos(colorMode === 'light' ? photolight : photodark)
     }, [colorMode])
 
     return (
@@ -35,7 +30,8 @@ export default () => {
                 <Gallery
                     enableImageSelection={false}
                     thumbnailStyle={ThumbnailStyle}
-                    images={photos} showImageCount={false}
+                    images={photos}
+                    showImageCount={false}
                     thumbnailImageComponent={Thumbnail}
                 />
             </Box>

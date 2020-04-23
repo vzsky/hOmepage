@@ -7,21 +7,21 @@ import { config } from '../config'
 const settings = config.work
 
 export default () => {
-    const { colorMode } = useColorMode();
-    const [bg, setBg] = useState('');
+    const { colorMode } = useColorMode()
+    const [bg, setBg] = useState('')
 
-    useEffect(()=>{
+    useEffect(() => {
         setBg(settings.bg[colorMode])
     }, [colorMode])
 
     return (
         <Layout title="What I do" bg={bg}>
             <Box width={['100%', '100%', '34%']} p={3}>
-                <Codeforces/>
+                <Codeforces />
             </Box>
             <Box width={['0%', '0%', '6%']} />
             <Box width={['100%', '100%', '60%']} p={3}>
-                <Code/>
+                <Code />
             </Box>
         </Layout>
     )
