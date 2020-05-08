@@ -2,10 +2,11 @@
   "name": "newlayki.net",
   "version": "0.1.0",
   "private": true,
+  "main": "index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
+    "export": "cross-env NEXT_EXPORT=true next build && cross-env NEXT_EXPORT=true next export",
     "start": "next start"
   },
   "dependencies": {
@@ -23,7 +24,7 @@
     "code-mirror-themes": "^1.0.0",
     "codemirror": "^5.52.2",
     "emotion-theming": "^10.0.27",
-    "next": "9.3.4",
+    "next": "canary",
     "next-offline": "4.0.6",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
@@ -35,6 +36,7 @@
   },
   "devDependencies": {
     "@types/node": "^13.11.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "cross-env": "6.0.3"
   }
 }
