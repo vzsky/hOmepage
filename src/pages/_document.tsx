@@ -18,6 +18,7 @@ class NextSite extends Document {
     return (
       <Html lang="en">
         <Head>
+          <link rel="manifest" href="/assets/manifest.json" />
           <link rel="shortcut icon" href="/assets/favicon.png" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
