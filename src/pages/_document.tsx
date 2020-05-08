@@ -18,7 +18,6 @@ class NextSite extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link rel="manifest" href="/assets/manifest.json" />
           <link rel="shortcut icon" href="/assets/favicon.png" />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
@@ -29,6 +28,7 @@ class NextSite extends Document {
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, user-scalable=yes"
           />
           <meta name="description" content="my99n's personal site" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
