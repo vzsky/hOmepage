@@ -88,6 +88,13 @@ export const config = {
         },
       },
     },
+    github: {
+      handle: 'vzsky',
+      inputBg: {
+        light: '#FFF',
+        dark: '#444',
+      },
+    },
     codeforces: {
       handle: 'my99n',
       color: {
