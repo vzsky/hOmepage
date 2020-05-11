@@ -3,6 +3,7 @@ import { Layout } from '../helper'
 import { useState, useEffect } from 'react'
 import Code from '../components/Code/Code'
 import Codeforces from '../components/Codeforces'
+import Github from '../components/Github'
 import { config } from '../config'
 const settings = config.work
 
@@ -23,6 +24,9 @@ export default () => {
       <Box width={['100%', '100%', '60%']} p={3}>
         <Code />
       </Box>
+      {/* <Box width="100%">
+        <Github />
+      </Box> */}
     </Layout>
   )
 }
