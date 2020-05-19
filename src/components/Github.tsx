@@ -20,6 +20,14 @@ const transform = (res: any, set: any, width: number) => {
   let sortby = sorters[Math.floor(Math.random() * sorters.length)]
   let first = width > config.breakpoint['sm'] ? 6 : 4
 
+  let num4char = (num: number): String => {
+    if (num >= 10000000) return `${num / 1000000}m`
+    if (num >= 1000000) return `${num / 1000000}.${(num % 1000000) / 100000}m`
+    if (num >= 10000) return `${num / 1000}k`
+    if (num >= 1000) return `${num / 1000}.${(num % 1000) / 100}k`
+    return `${num}`
+  }
+
   set(
     res
       .filter((val: any) => !val.fork)
@@ -33,9 +41,9 @@ const transform = (res: any, set: any, width: number) => {
             ? val.description.slice(0, 67) + '...'
             : val.description
           : 'description is not provided',
-        stars: val.stargazers_count, // restricted to 4 char
-        forks: val.forks, // restricted to 4 char
-        watchers: val.watchers, // restricted to 4 char
+        stars: num4char(val.stargazers_count),
+        forks: num4char(val.forks),
+        watchers: num4char(val.watchers),
         lang: val.language,
       }))
   )
@@ -66,7 +74,7 @@ const Card = ({ val, mode }) => (
           <Stack isInline align="center">
             <Icon icon={IconMap['githubStar']} />
             <Text ml={1} fontSize="sm">
-              212{val.stars}
+              {val.stars}
             </Text>
           </Stack>
         </Flex>
@@ -78,12 +86,12 @@ const Card = ({ val, mode }) => (
         <Stack isInline align="center">
           <Icon icon={IconMap['githubFork']} />
           <Text ml={1} fontSize="sm">
-            234{val.forks}
+            {val.forks}
           </Text>
           <Text> </Text>
           <Icon icon={IconMap['githubWatch']} />
           <Text ml={1} fontSize="sm">
-            234{val.watchers}
+            {val.watchers}
           </Text>
         </Stack>
         <Text fontSize="sm"> {val.lang} </Text>
