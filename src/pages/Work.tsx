@@ -24,9 +24,9 @@ export default () => {
       <Box width={['100%', '100%', '60%']} p={3}>
         <Code />
       </Box>
-      {/* <Box width="100%">
+      <Box width="100%">
         <Github />
-      </Box> */}
+      </Box>
     </Layout>
   )
 }

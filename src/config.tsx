@@ -94,6 +94,10 @@ export const config = {
         light: '#FFF',
         dark: '#444',
       },
+      cardBg: {
+        light: 'gray.50',
+        dark: '#333',
+      },
     },
     codeforces: {
       handle: 'my99n',
