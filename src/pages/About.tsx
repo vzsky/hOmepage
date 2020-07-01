@@ -1,9 +1,10 @@
 import { Box, Text, Flex, Stack, useColorMode } from '@chakra-ui/core'
-import { Image, IconMap, useWindowSize, Prop, Layout } from '../helper'
+import { Image, useWindowSize, Prop, Layout } from '../helper'
 import { Icon as Iconify } from '@iconify/react'
 import { useEffect, useState } from 'react'
-import { config } from '../config'
-const settings = config.about
+import { IconMap } from '../config/icons'
+import { config } from '../config/config'
+import settings from '../config/about'
 
 const Description = () => (
   <>

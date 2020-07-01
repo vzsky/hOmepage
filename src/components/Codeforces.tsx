@@ -2,8 +2,7 @@ import { Text, Box, Flex, Input, useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 import { GetApi } from '../helper'
-import { config } from '../config'
-const settings = config.work.codeforces
+import settings from '../config/codeforces'
 
 const initialData = {
   labels: ['', '', '', '', '', '', '', '', '', ''],
@@ -43,7 +42,7 @@ export default () => {
     const effect = async () => {
       let CfApi = 'https://codeforces.com/api/'
       const res = await GetApi(CfApi + 'user.rating?handle=' + handle)
-      if (res === undefined) {
+      if (res === undefined || res.result === undefined) {
         setShowChart(false)
         return
       }

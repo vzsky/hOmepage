@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Code from '../components/Code/Code'
 import Codeforces from '../components/Codeforces'
 import Github from '../components/Github'
-import { config } from '../config'
+import { config } from '../config/config'
 const settings = config.work
 
 export default () => {

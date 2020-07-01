@@ -4,7 +4,7 @@ import Head from 'next/head'
 
 import { Global, css } from '@emotion/core'
 import { CSSReset, ThemeProvider, ColorModeProvider } from '@chakra-ui/core'
-import { theme } from '../config'
+import { theme } from '../config/config'
 import '../app.css'
 
 // codemirror import

@@ -10,9 +10,10 @@ import {
 } from '@chakra-ui/core'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
-import { GetApi, useWindowSize, IconMap } from '../helper'
-import { config } from '../config'
-const settings = config.work.github
+import { GetApi, useWindowSize } from '../helper'
+import { IconMap } from '../config/icons'
+import { config } from '../config/config'
+import settings from '../config/github'
 
 const transform = (res: any, set: any, width: number) => {
   // first 6 or 3 of not forked repos sorted randomly by sorters

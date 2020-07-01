@@ -1,8 +1,8 @@
 import { useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
-import { config } from '../../config'
+import codeconfig from '../../config/code'
 import chroma from 'chroma-js'
-const settings = config.work.code.select
+const settings = codeconfig.select
 
 const menu = (provided: any) => {
   Object.assign(provided, { zIndex: 1000 })

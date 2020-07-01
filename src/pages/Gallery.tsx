@@ -3,7 +3,7 @@ import { Layout, Prop } from '../helper'
 import { useState, useEffect } from 'react'
 import Gallery from 'react-grid-gallery'
 import { photolight, photodark } from '../components/Photos'
-import { config } from '../config'
+import { config } from '../config/config'
 const settings = config.gallery
 
 const Thumbnail = (props: Prop) => {

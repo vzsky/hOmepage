@@ -2,11 +2,11 @@ import { UnControlled as CodeMirror } from 'react-codemirror2'
 import { useColorMode, Flex, Box, Text } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
 import Select from 'react-select'
-import { config } from '../../config'
 import SelectStyle from './SelectStyle'
 import languages from './Languages'
 import { useWindowSize } from '../../helper'
-const settings = config.work.code
+import { config } from '../../config/config'
+import settings from '../../config/code'
 
 export default () => {
   let randomLang = languages[Math.floor(Math.random() * languages.length)]

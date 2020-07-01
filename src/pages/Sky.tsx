@@ -1,8 +1,7 @@
 import { Flex, Box, Text, useColorMode } from '@chakra-ui/core'
 import { Prop, useWindowSize, Image, Draggable, Loading } from '../helper'
-import { config } from '../config'
+import settings from '../config/home'
 import { useState, useEffect } from 'react'
-const settings = config.home
 
 const Sun = (props: Prop) => {
   const { toggleColorMode } = useColorMode()
