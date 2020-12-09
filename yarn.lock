@@ -1090,6 +1090,11 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
+"@iconify-icons/heroicons-solid@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/heroicons-solid/-/heroicons-solid-1.1.0.tgz#fd2a0d231c3ddba32f22db6364c1d9276cd54933"
+  integrity sha512-N85f5Jkb+qSeTFHlF6po+DsfGGoD5KMiquEKTmQGzCesXhG+aGT4AlwzVm9T7m0SWphzeOxFypGvaFrSubmXyg==
+
 "@iconify/icons-bx@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@iconify/icons-bx/-/icons-bx-1.0.3.tgz#490206b3ded7f813be654b551c64548b08d7ebd6"
@@ -1099,6 +1104,11 @@
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.0.11.tgz#73cd387ae1da39c38134fdabc96db44e48d37268"
   integrity sha512-9zWp0PTlPNtYnOQjHa8R22UA9U/Lt4j3D+ojD5NONkvbprCEr056iKWiuBJnyrIvLUa7FxKK2K8dbq7CuXm4rA==
+
+"@iconify/icons-mdi@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify/icons-mdi/-/icons-mdi-1.1.1.tgz#72d8f05e42566d5ad0e3bde063aa32fa7e14c290"
+  integrity sha512-/hda/8L32bnEQG4Gte2gnkUXuUSQDUyNM0XXSKoaSoigAuMM8D62A1Mqs1pssL7adH/vmYydVJDcn2UKjtNxqg==
 
 "@iconify/icons-simple-icons@^1.0.27":
   version "1.0.31"

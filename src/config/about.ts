@@ -25,6 +25,10 @@ export default {
         href: 'https://www.linkedin.com/in/touchs/',
         icon: 'linkedin',
       },
+      {
+        href: 'https://my99n-cv.now.sh',
+        icon: 'cv',
+      }
     ],
     color: {
       focus: {
