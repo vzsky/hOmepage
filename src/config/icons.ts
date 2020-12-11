@@ -8,9 +8,9 @@ import Telegram from '@iconify/icons-simple-icons/telegram'
 import Heart from '@iconify/icons-bx/bxs-heart'
 import Fork from '@iconify/icons-whh/fork'
 import Eye from '@iconify/icons-ic/round-remove-red-eye'
-import CV from '@iconify/icons-mdi/account-search';
-
-
+import Account from '@iconify/icons-mdi/account-box';
+import Search from '@iconify/icons-bx/bx-search-alt';
+import Document from '@iconify/icons-mdi/file-document';
 
 export const IconMap = {
   codeforces: Codeforces,
@@ -23,5 +23,6 @@ export const IconMap = {
   githubStar: Heart,
   githubFork: Fork,
   githubWatch: Eye,
-  cv: CV,
+  cv: Document,
+  search: Search
 }

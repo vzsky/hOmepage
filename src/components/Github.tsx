@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
-import { GetApi, useWindowSize } from '../helper'
+import { GetApi, useWindowSize, IconInput } from '../helper'
 import { IconMap } from '../config/icons'
 import { config } from '../config/config'
 import settings from '../config/github'
@@ -141,11 +141,14 @@ export default () => {
             Github of
           </Text>
           <Box width={['100%', '100%', '30%']}>
-            <Input
-              bg={inputBg}
-              value={handle}
-              onChange={(e: any) => setHandle(e.target.value)}
-            />
+            <IconInput icon="search">
+              <Input
+                spellCheck={false}
+                bg={inputBg}
+                value={handle}
+                onChange={(e: any) => setHandle(e.target.value)}
+              />
+            </IconInput>
           </Box>
         </Flex>
       </Flex>

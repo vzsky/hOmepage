@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
 import * as Chakra from '@chakra-ui/core'
 import ReactDraggable from 'react-draggable'
-
+import { Icon } from '@iconify/react'
+import { IconMap } from './config/icons'
+ 
 export type Prop = { [x: string]: any }
 
 export const useWindowSize = () => {
@@ -30,6 +32,18 @@ export const useWindowSize = () => {
   }, []) // Empty array ensures that effect is only run on mount and unmount
 
   return windowSize
+}
+
+export const IconInput = (props: Prop) => {
+  return (
+  <Chakra.InputGroup>
+    <Chakra.InputLeftElement
+      pointerEvents="none"
+      children={<Icon icon={IconMap[props.icon]} />}
+    />
+    {props.children}
+  </Chakra.InputGroup>
+  )
 }
 
 export const Image = (props: Prop) => (

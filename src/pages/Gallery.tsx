@@ -1,9 +1,12 @@
-import { useColorMode, Box, Image } from '@chakra-ui/core'
+import { useColorMode, Box, Image, Text, Flex } from '@chakra-ui/core'
 import { Layout, Prop } from '../helper'
 import { useState, useEffect } from 'react'
 import Gallery from 'react-grid-gallery'
 import { photolight, photodark } from '../components/Photos'
 import { config } from '../config/config'
+import { Icon } from '@iconify/react'
+import { IconMap } from '../config/icons'
+import { IGhref } from '../config/gallery'
 const settings = config.gallery
 
 const Thumbnail = (props: Prop) => {
@@ -36,6 +39,20 @@ export default () => {
           showImageCount={false}
           thumbnailImageComponent={Thumbnail}
         />
+      </Box>
+      <Box width={'100%'} p={3}>
+        <Flex justifyContent="center" alignItems="center">
+          <Text px={3}>
+            Follow 
+            <a href={IGhref} style={{padding:'5px'}}>
+              @my99.film
+            </a>
+            on instagram!
+          </Text>
+          <a href = {IGhref}>
+            <Icon icon={IconMap["instagram"]} />
+          </a>
+        </Flex>
       </Box>
     </Layout>
   )

@@ -1,7 +1,7 @@
 import { Text, Box, Flex, Input, useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
-import { GetApi } from '../helper'
+import { GetApi, IconInput } from '../helper'
 import settings from '../config/codeforces'
 
 const initialData = {
@@ -80,11 +80,14 @@ export default () => {
           Codeforces of
         </Text>
         <Box width={['100%', '100%', '50%']}>
-          <Input
-            bg={inputBg}
-            value={handle}
-            onChange={(e: any) => setHandle(e.target.value)}
-          />
+          <IconInput icon="search">
+            <Input
+              spellCheck={false}
+              bg={inputBg}
+              value={handle}
+              onChange={(e: any) => setHandle(e.target.value)}
+            />
+          </IconInput>
         </Box>
       </Flex>
       <Box height="300px" paddingTop={5}>
