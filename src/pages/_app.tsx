@@ -10,6 +10,9 @@ import '../app.css'
 // codemirror import
 import 'codemirror/lib/codemirror.css'
 
+// carousel import
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; 
+
 import '../codetheme/darkcode.css'
 import '../codetheme/lightcode.css'
 
