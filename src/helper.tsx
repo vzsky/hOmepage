@@ -6,6 +6,10 @@ import { IconMap } from './config/icons'
  
 export type Prop = { [x: string]: any }
 
+export const randomFromList = (s:any[]) => {
+  return s[Math.floor(Math.random()*s.length)]
+}
+
 export const useWindowSize = () => {
   const isClient = typeof window === 'object'
 
