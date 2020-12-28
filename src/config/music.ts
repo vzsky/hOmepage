@@ -3,5 +3,5 @@ export default {
     dark: 'green.500', 
     light: 'green.50'
   }, 
-  songs: ['Belief', 'BoundToBreak', 'Creep', 'Scientist', 'SleepyKitty', 'Up']
+  songs: ['XSdmpOqmCTA', 'yGz9ep6M3zE', 'RAJO6tiurZs', 'dlpbH6sWF9U', 'efnWcNPiYQM']
 }

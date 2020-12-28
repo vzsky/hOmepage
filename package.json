@@ -38,6 +38,8 @@
     "react-dom": "^16.13.1",
     "react-draggable": "^4.2.0",
     "react-grid-gallery": "^0.5.5",
+    "react-player": "^2.7.2",
+    "react-responsive-carousel": "^3.2.11",
     "react-select": "^3.1.0",
     "react-ui-cards": "^2.0.0"
   },
