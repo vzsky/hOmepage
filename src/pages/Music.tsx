@@ -1,16 +1,17 @@
-import { useColorMode } from '@chakra-ui/core'
+import { useColorMode, Box } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
-import { Layout } from '../helper'
+import { Layout, useWindowSize, emToPx} from '../helper'
 import settings from '../config/music'
 import React from 'react'
 import ReactPlayer from 'react-player'
 import { Carousel } from 'react-responsive-carousel';
+import { config } from '../config/config'
 
-const YoutubeSlide = ({ url, isSelected }) => (
-  <ReactPlayer width="100%" height="500px" url={url} playing={false} />
+const YoutubeSlide = ({ url, height }) => (
+  <ReactPlayer width="100%" height={height} url={url} playing={false} />
 );
 
-const CarouselVideo = ({ data }) => {
+const CarouselVideo = ({ data, height }) => {
 
   const customRenderItem = (item:any, props:any) => {
     if (props.isSelected === true) console.log("This")
@@ -46,7 +47,7 @@ const CarouselVideo = ({ data }) => {
       {data.map((vidID:string, ind:number) => (
         <YoutubeSlide
           url={getVideoUrl(vidID)}
-          isSelected={false}
+          height={height}
           key={ind}
         />
       ))}
@@ -56,14 +57,23 @@ const CarouselVideo = ({ data }) => {
 
 export default () => {
   const { colorMode } = useColorMode()
+  const window = useWindowSize()
   const [bg, setBg] = useState('')
+  const [vdoHeight, setVdoHeight] = useState("200px")
+  useEffect(() => {
+    setVdoHeight(window.width > emToPx(config.breakpoint['lg'])
+    ? "500px" 
+    : (window.width - 100)/1920 * 1080+'px')
+  }, [window])
   useEffect(() => {
     setBg(settings.bg[colorMode])
   }, [colorMode])
 
   return (
     <Layout bg={bg} title="Let's listen">
-      <CarouselVideo data={settings.songs}/>
+      <Box width="100%">
+        <CarouselVideo data={settings.songs} height={vdoHeight}/>
+      </Box>
     </Layout>
   )
 }

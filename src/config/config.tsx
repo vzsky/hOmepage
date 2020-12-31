@@ -1,15 +1,12 @@
-import { theme as Chakratheme } from '@chakra-ui/core'
-
-export const theme = {
-  ...Chakratheme,
-  colors: {
-    ...Chakratheme.colors,
-  },
-}
+import { extendTheme } from "@chakra-ui/react"
+import { createBreakpoints } from "@chakra-ui/theme-tools"
 
 export const config = {
   breakpoint: {
-    sm: 480,
+    sm: "30em",
+    md: "48em",
+    lg: "62em",
+    xl: "80em",
   },
   work: {
     bg: {
@@ -24,3 +21,6 @@ export const config = {
     },
   },
 }
+
+const breakpoints = createBreakpoints(config.breakpoint)
+export const theme = extendTheme({ breakpoints })

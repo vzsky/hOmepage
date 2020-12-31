@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import { Icon } from '@iconify/react'
 import { useEffect, useState } from 'react'
-import { GetApi, useWindowSize, IconInput } from '../helper'
+import { GetApi, useWindowSize, IconInput, emToPx } from '../helper'
 import { IconMap } from '../config/icons'
 import { config } from '../config/config'
 import settings from '../config/github'
@@ -19,7 +19,7 @@ const transform = (res: any, set: any, width: number) => {
   // first 6 or 3 of not forked repos sorted randomly by sorters
   let sorters = ['pushed_at', 'stargazers_count']
   let sortby = sorters[Math.floor(Math.random() * sorters.length)]
-  let first = width > config.breakpoint['sm'] ? 6 : 4
+  let first = width > emToPx(config.breakpoint['sm']) ? 6 : 4
 
   let num4char = (num: number): String => {
     if (num >= 10000000) return `${num / 1000000}m`

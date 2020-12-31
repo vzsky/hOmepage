@@ -1,5 +1,5 @@
 import { Box, Text, Flex, Stack, useColorMode } from '@chakra-ui/core'
-import { Image, useWindowSize, Prop, Layout } from '../helper'
+import { Image, useWindowSize, Prop, Layout, emToPx } from '../helper'
 import { Icon as Iconify } from '@iconify/react'
 import { useEffect, useState } from 'react'
 import { IconMap } from '../config/icons'
@@ -45,7 +45,7 @@ const Social = () => {
   const window = useWindowSize()
   const [inline, setInline] = useState(true)
   useEffect(() => {
-    setInline(window.width > config.breakpoint['sm'] ? false : true)
+    setInline(window.width > emToPx(config.breakpoint['sm']) ? false : true)
   }, [window])
 
   return (

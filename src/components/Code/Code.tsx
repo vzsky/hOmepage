@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Select from 'react-select'
 import SelectStyle from './SelectStyle'
 import languages from './Languages'
-import { useWindowSize } from '../../helper'
+import { useWindowSize, emToPx } from '../../helper'
 import { config } from '../../config/config'
 import settings from '../../config/code'
 
@@ -19,7 +19,7 @@ export default () => {
   const window = useWindowSize()
 
   useEffect(() => {
-    setLineNum(window.width > config.breakpoint['sm'])
+    setLineNum(window.width > emToPx(config.breakpoint['sm']))
   }, [window])
 
   useEffect(() => {

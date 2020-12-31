@@ -10,6 +10,11 @@ export const randomFromList = (s:any[]) => {
   return s[Math.floor(Math.random()*s.length)]
 }
 
+export const emToPx = (em: string) => {
+  let n = parseInt(em);
+  return n*16;
+}
+
 export const useWindowSize = () => {
   const isClient = typeof window === 'object'
 
