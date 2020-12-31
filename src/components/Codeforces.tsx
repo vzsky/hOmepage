@@ -72,14 +72,14 @@ export default () => {
     <Box>
       <Flex wrap="wrap">
         <Text
-          width={['100%', '100%', '50%']}
+          width={{base:'100%', sm:'100%', md:'50%'}}
           alignSelf="center"
           justifySelf="center"
-          fontSize={['sm', 'md', 'lg']}
+          fontSize={{base:'sm', sm:'md', md:'lg'}}
         >
           Codeforces of
         </Text>
-        <Box width={['100%', '100%', '50%']}>
+        <Box width={{base:'100%', sm:'100%', md:'50%'}}>
           <IconInput icon="search">
             <Input
               spellCheck={false}

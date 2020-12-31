@@ -35,14 +35,14 @@ export default () => {
     <>
       <Flex width="100%" wrap="wrap">
         <Text
-          width={['100%', '100%', '20%']}
+          width={{base:'100%', sm:'100%', md:'20%'}}
           alignSelf="center"
           justifySelf="center"
-          fontSize={['sm', 'md', 'lg']}
+          fontSize={{base:'sm', sm:'md', md:'lg'}}
         >
           I speak
         </Text>
-        <Box width={['100%', '100%', '80%']}>
+        <Box width={{base:'100%', sm:'100%', md:'80%'}}>
           <Select
             isSearchable={false}
             styles={SelectStyle}

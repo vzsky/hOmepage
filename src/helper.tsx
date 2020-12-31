@@ -72,7 +72,7 @@ export const Layout = (props: Prop) => (
   <Chakra.Flex direction="column" width="100%" wrap="wrap" bg={props.bg}>
     <Chakra.Box maxW="1000px" width="100%" alignSelf="center" p={5}>
       <Chakra.Box width="100%">
-        <Chakra.Text fontSize={['3xl', '4xl', '5xl', '6xl']}>
+        <Chakra.Text fontSize={{base:'3xl', sm:'4xl', md:'5xl', lg:'6xl'}}>
           {' '}
           {props.title}{' '}
         </Chakra.Text>

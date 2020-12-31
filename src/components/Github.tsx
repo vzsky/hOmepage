@@ -57,7 +57,7 @@ const Card = ({ val, mode }) => (
     height="130px"
     borderWidth="1px"
     rounded={10}
-    width={['100%', '30%']}
+    width={{base:'100%', sm:'47%', md:'30%'}}
     mb={3}
     bg={settings.cardBg[mode]}
   >
@@ -81,7 +81,7 @@ const Card = ({ val, mode }) => (
         </Flex>
       </Flex>
       <Box height="65px" overflow="hidden">
-        <Text> {val.desc} </Text>
+        <Text fontSize="13px"> {val.desc} </Text>
       </Box>
       <Flex justifyContent="space-between" align="baseline">
         <Stack isInline align="center">
@@ -95,7 +95,7 @@ const Card = ({ val, mode }) => (
             {val.watchers}
           </Text>
         </Stack>
-        <Text fontSize="sm"> {val.lang} </Text>
+        <Text fontSize="xs"> {val.lang} </Text>
       </Flex>
     </Box>
   </Box>
@@ -131,16 +131,16 @@ export default () => {
   return (
     <Box>
       <Flex wrap="wrap">
-        <Flex width={['100%', '100%', '50%']}>
+        <Flex width={{base:'100%', sm:'100%', md:'50%'}}>
           <Text
-            width={['100%', '100%', '25%']}
+            width={{base:'100%', sm:'100%', md:'25%'}}
             alignSelf="center"
             justifySelf="center"
-            fontSize={['sm', 'md', 'lg']}
+            fontSize={{base:'sm', sm:'md', md:'lg'}}
           >
             Github of
           </Text>
-          <Box width={['100%', '100%', '30%']}>
+          <Box width={{base:'100%', sm:'100%', md:'30%'}}>
             <IconInput icon="search">
               <Input
                 spellCheck={false}

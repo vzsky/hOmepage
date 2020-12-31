@@ -17,11 +17,11 @@ export default () => {
 
   return (
     <Layout title="What I do" bg={bg}>
-      <Box width={['100%', '100%', '34%']} p={3}>
+      <Box width={{base:'100%', sm:'100%', md:'34%'}} p={3}>
         <Codeforces />
       </Box>
-      <Box width={['0%', '0%', '6%']} />
-      <Box width={['100%', '100%', '60%']} p={3}>
+      <Box width={{base:'0%', sm:'0%', md:'6%'}} />
+      <Box width={{base:'100%', sm:'100%', md:'60%'}} p={3}>
         <Code />
       </Box>
       <Box width="100%">

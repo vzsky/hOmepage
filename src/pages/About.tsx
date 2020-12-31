@@ -67,15 +67,15 @@ export default () => {
   }, [colorMode])
   return (
     <Layout bg={bg} title="About me">
-      <Box width={['100%', '61%']} p={2}>
-        <Text fontSize={['sm', 'md', 'xl', '2xl']}>
+      <Box width={{base:'100%', sm:'61%'}} p={2}>
+        <Text fontSize={{base:'sm', sm:'md', md:'xl', lg:'2xl'}}>
           <Description />
         </Text>
       </Box>
-      <Flex width={['100%', '5%']} justify="flex-end" p={1}>
+      <Flex width={{base:'100%', sm:'5%'}} justify="flex-end" p={1}>
         <Social />
       </Flex>
-      <Box width={['100%', '34%']}>
+      <Box width={{base:'100%', sm:'34%'}}>
         <Image maxH="100%" maxW="100%" src={pic} />
       </Box>
     </Layout>

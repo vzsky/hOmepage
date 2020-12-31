@@ -82,7 +82,7 @@ const SkyGenerator = (Dimension: any) => {
             top={Dimension.name.top}
             left={Dimension.name.left}
             position="absolute"
-            fontSize={['xl', '3xl', '4xl', '5xl']}
+            fontSize={{base:'xl', sm:'3xl', md:'4xl', lg:'5xl'}}
           >
             Touch <br /> Sungkawichai
           </Text>
@@ -107,7 +107,7 @@ const Wave = DraggableItemGenerator(settings.wave)
 
 const ScrollDownText = () => (
   <Flex width="100%" justify="center">
-    <Text position="absolute" bottom={[5, "5%"]} fontSize={['xs', 'sm']} justifySelf="center">
+    <Text position="absolute" bottom={{base:5, sm:"5%"}} fontSize={{base:'xs', sm:'sm'}} justifySelf="center">
       Don't judge me by the cover, Scroll down!
     </Text>
   </Flex>
