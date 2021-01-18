@@ -109,4 +109,14 @@ echo ""
 }
 `,
   },
+  {
+    value: '9',
+    mode: 'text/x-haskell',
+    label: 'Haskell',
+    color,
+    code: `main = interact $ greet
+greet :: String -> String
+greet x = "Hello " ++ x ++ "!"
+`,
+  },
 ]

@@ -9,8 +9,7 @@ import settings from '../config/about'
 const Description = () => (
   <>
     Hey, I am Touch Sungkawichai <br />
-    I am a student filled with passion about computation, computer science and
-    mathematics. <br />
+    I am a student filled with passion about computation, philosophy, and mathematics. <br />
   </>
 )
 

@@ -5,7 +5,7 @@
   letter-spacing: 0.3px;
   word-spacing: 1px;
   background: #272822;
-  color: #f8f8f2;
+  color: #00d9ff;
 }
 .cm-s-monokai .CodeMirror-lines {
   padding: 8px 0;
@@ -19,7 +19,7 @@
   border: none;
 }
 .cm-s-monokai div.CodeMirror-cursor {
-  border-left: 3px solid #f8f8f2;
+  border-left: 3px solid #727272;
 }
 .cm-s-monokai .CodeMirror-activeline-background {
   background: #49483e;
@@ -34,7 +34,7 @@
   color: #ab3bdf;
 }
 .cm-s-monokai .cm-number {
-  color: #66d9ef;
+  color: #ef66e4;
 }
 .cm-s-monokai .cm-atom {
   color: #66d9ef;

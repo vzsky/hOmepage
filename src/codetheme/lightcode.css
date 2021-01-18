@@ -20,7 +20,7 @@
   letter-spacing: 0.3px;
   word-spacing: 1px;
   background: #f7f7f7;
-  color: #3a3432;
+  color: #664338;
 }
 .cm-s-3024-day .CodeMirror-lines {
   padding: 8px 0;
@@ -35,7 +35,7 @@
   border: none;
 }
 .cm-s-3024-day div.CodeMirror-cursor {
-  border-left: 3px solid #5c5855;
+  border-left: 3px solid #bdbab8;
 }
 .cm-s-3024-day .CodeMirror-activeline-background {
   background: #e8f2ff;
@@ -60,14 +60,14 @@
   color: #ee544a;
 }
 .cm-s-3024-day .cm-tag {
-  color: #ee925c;
+  color: #d87840;
 }
 .cm-s-3024-day .cm-variable {
   color: #01a252;
 }
 .cm-s-3024-day .cm-def {
   font-style: italic;
-  color: #e8bbd0;
+  color: #ca6696;
 }
 .cm-s-3024-day .cm-variable-2 {
   color: #01a0e4;
@@ -76,7 +76,7 @@
   color: #66d9ef;
 }
 .cm-s-3024-day .cm-operator {
-  color: #f92672;
+  color: #ce2160;
 }
 .cm-s-3024-day .CodeMirror-linenumber {
   color: #807d7c;
