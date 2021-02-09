@@ -3,5 +3,13 @@ export default {
     dark: 'green.500', 
     light: 'green.50'
   }, 
-  songs: ['XSdmpOqmCTA', 'yGz9ep6M3zE', 'RAJO6tiurZs', 'dlpbH6sWF9U', 'efnWcNPiYQM']
+  songs: [
+    'XSdmpOqmCTA', // up
+    'yGz9ep6M3zE', // sleepy kitty
+    'RAJO6tiurZs', // scientist
+    'dlpbH6sWF9U', // creep
+    'efnWcNPiYQM', // bound to break
+    '_LHaRDNCVw8', // belief
+    'MujfoSwu6Us' // new divide
+  ]
 }
