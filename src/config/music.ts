@@ -4,6 +4,7 @@ export default {
     light: 'green.50'
   }, 
   songs: [
+    'r0lzcbwY4SM', // spring's dilemma
     'XSdmpOqmCTA', // up
     'yGz9ep6M3zE', // sleepy kitty
     'RAJO6tiurZs', // scientist

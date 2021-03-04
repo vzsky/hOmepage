@@ -1,9 +1,9 @@
 import { useColorMode, Box } from '@chakra-ui/core'
 import { Layout } from '../helper'
 import { useState, useEffect } from 'react'
-import Code from '../components/Code/Code'
-import Codeforces from '../components/Codeforces'
-import Github from '../components/Github'
+import Code from './Code/Code'
+import Codeforces from './Codeforces'
+import Github from './Github'
 import { config } from '../config/config'
 const settings = config.work
 

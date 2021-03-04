@@ -1,8 +1,8 @@
-import Sky from './Sky'
-import About from './About'
-import Gallery from './Gallery'
-import Work from './Work'
-import Music from './Music'
+import Sky from '../components/Sky'
+import About from '../components/About'
+import Gallery from '../components/Gallery'
+import Work from '../components/Work'
+import Music from '../components/Music'
 
 import { Box, useColorMode } from '@chakra-ui/core'
 import { useEffect, useState } from 'react'
