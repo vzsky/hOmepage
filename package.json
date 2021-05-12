@@ -31,7 +31,7 @@
     "chart.js": "^2.9.3",
     "chroma-js": "^2.1.0",
     "code-mirror-themes": "^1.0.0",
-    "codemirror": "^5.52.2",
+    "codemirror": "^5.58.2",
     "emotion-theming": "^10.0.27",
     "framer-motion": "^3.1.1",
     "next": "canary",
